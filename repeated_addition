@@ -1,0 +1,24 @@
+This program multipy 2 no. by adding them continously.
+
+;
+
+Start:	read		; read n -> acc
+	store count
+	read
+	store sum
+
+Radd:	load count
+	dec
+	jmpn Done
+	store count
+	load finalsum
+	add sum
+	store finalsum
+	jump Radd
+Done:	load finalsum
+	write
+	stop
+
+count:	.data 2 0
+sum:	.data 2 0
+finalsum:	.data 2 0

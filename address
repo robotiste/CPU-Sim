@@ -1,0 +1,13 @@
+
+
+
+Start :
+	read
+	jump Done
+	add sum
+
+Done:
+addr sum
+stop
+
+sum: .data 2 0
