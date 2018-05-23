@@ -1,0 +1,28 @@
+; This program reads in 2 integers and divides them together
+; using repeated subtraction. Then it outputs
+; the result.
+;
+
+Start:	read		; read n -> acc
+	store divident
+	read
+	store divisor
+
+Radd:	load divident
+	subtract divisor
+	jmpn Done
+	store divident
+	load count
+	inc
+	store count
+	jump Radd
+Done:	load count
+	write
+	load divident
+	write
+	stop
+
+count:	.data 2 0
+divisor:	.data 2 15
+divident:	.data 2 45
+remainder:.data 2 0

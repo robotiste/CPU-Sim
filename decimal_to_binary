@@ -1,0 +1,29 @@
+; This program converts decimal to binary
+;
+
+Start:	read
+	store num
+
+Proc:	load num
+	mod two
+	multiply place
+	add ans
+	store ans
+	load place
+	multiply ten
+	store place
+	load num
+	divide two
+	jmpz Done
+	store num
+	jump Proc
+
+Done:	load ans
+	write
+	stop
+
+num:	.data 2 0
+ans:		.data 2 0
+two:		.data 2 2
+ten:		.data 2 10
+place:	.data 2 1

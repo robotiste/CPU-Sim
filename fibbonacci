@@ -1,0 +1,30 @@
+; This program reads in 1 integers and prints 
+; fibbonacci series upto that number
+;
+
+Start:	read
+	store count
+	load a
+	write
+	load b
+	write
+Proc:	load count
+	dec
+	jmpz Done
+	store count
+	load a
+	store c
+	load b
+	store a
+	add c
+	store b
+	write
+	jump Proc	
+
+Done: stop
+	
+
+count:	.data 2 0
+a:	.data 2 0
+b:	.data 2 1
+c:	.data 2 0

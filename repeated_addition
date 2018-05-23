@@ -1,5 +1,6 @@
-This program multipy 2 no. by adding them continously.
-
+; This program reads in 2 integers and multiplies them together
+; using repeated addition. Then it outputs
+; the result.
 ;
 
 Start:	read		; read n -> acc

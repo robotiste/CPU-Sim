@@ -1,0 +1,34 @@
+INIT:   LDADR
+        LDA DIRECT HEAD
+        INC
+        STA DIRECT HEAD
+        STA DIRECT NEXT
+START:  INPINT
+        SNA
+        BUN DIRECT PUSH
+        LDA DIRECT HEAD
+        TEMP
+        LDA DIRECT NEXT
+        SUBTRACT
+        SZA
+        BUN DIRECT POP
+        BUN DIRECT DONE
+POP:    LDA INDIRECT HEAD
+        OUTINT
+        LDA DIRECT HEAD
+        INC
+        STA DIRECT HEAD
+        TEMP
+        LDA DIRECT NEXT
+        SUBTRACT
+        SZA
+        BUN DIRECT POP
+        BUN DIRECT DONE
+PUSH:   STA INDIRECT NEXT
+        LDA DIRECT NEXT 
+        INC
+        STA DIRECT NEXT
+        BUN DIRECT START
+DONE:   HLT
+NEXT:   .data 1 [0]
+HEAD:   .data 1 [0]    

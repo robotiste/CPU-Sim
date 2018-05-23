@@ -1,0 +1,6 @@
+A: ADD DIRECT five
+ISZ DIRECT COUNT
+BUN DIRECT A
+HLT
+five: .data 1 [5]
+COUNT: .data 1 [-20]

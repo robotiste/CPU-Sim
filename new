@@ -1,0 +1,12 @@
+INP
+BSA DIRECT BRANCH
+REPEAT:
+
+BRANCH:	
+
+var:	.data 2 0
+arr1:	.data 2 0
+arr2:	.data 2 0
+arr3:	.data 2 0
+arr4:	.data 2 0
+arr5:	.data 2 0

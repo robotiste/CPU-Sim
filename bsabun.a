@@ -1,0 +1,8 @@
+LDA DIRECT first
+BSA DIRECT A
+HLT
+A: .data 1 [0]
+ADD DIRECT C
+BUN INDIRECT A
+C: .data 1 [23]
+first: .data 1 [77]

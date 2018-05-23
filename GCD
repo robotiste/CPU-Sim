@@ -1,0 +1,31 @@
+; This program reads 2 integers and
+; calculates GCD of these 2 numbers
+;
+
+Start:	read
+	store a
+	read
+	store b
+	subtract a	; Check that if b > a or not
+	jmpn Swap	; Swap a and b if b < a
+Proc:	load b
+	mod a
+	jmpz Done
+	store b
+	jump Swap
+
+Done: load a
+	write
+	stop
+
+Swap:	load b
+	store c
+	load a
+	store b
+	load c
+	store a
+	jump Proc
+
+a:	.data 2 0
+b:	.data 2 0
+c:	.data 2 0
